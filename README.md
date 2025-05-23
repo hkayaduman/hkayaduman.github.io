@@ -12,7 +12,7 @@ I am a **Postdoctoral Researcher** at the *School of Computing, University of Ea
 - 🎓 **Associate Professor (Docent)** in Open and Distance Education (2022)  
   *Granted by the Presidency of the Turkish Interuniversity Board*
 
-- 🎓 **Ph.D.** in Computer Education and Instructional Technology  
+- 🎓 **Ph.D.** in Computer Education and Instructional Technology (2017)
   *Middle East Technical University, Turkey*
 
 - 🌍 **Visiting Research Scholar**  
