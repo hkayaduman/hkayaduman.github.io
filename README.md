@@ -1,7 +1,6 @@
 # 👋 Hi, I'm Dr. Halil Kayaduman
 
-I am a **Postdoctoral Researcher** at the *School of Computing, University of Eastern Finland* (2024–2025), specializing in **idiographic learning analytics** and **psychological network analysis**.  
-Currently, I also serve as an **Associate Professor (Docent)** at the *Distance Education Application and Research Center, Inonu University*, Turkey.
+I am a **Postdoctoral Researcher** at the *School of Computing, University of Eastern Finland* (2024–2025), specializing in **idiographic learning analytics** and **psychological network analysis**. Currently, I also serve as an **Associate Professor (Docent)** at the *Distance Education Application and Research Center, Inonu University*, Turkey.
 
 ---
 
