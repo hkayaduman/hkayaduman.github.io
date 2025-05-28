@@ -11,22 +11,22 @@ My research interests include AI in Education, Educational Technology, Human-cen
 ## 📚 Academic Background
 
 - **Postdoctoral Researcher (2024–2025)**  
-  School of Computing, University of Eastern Finland
+  Computer Science, University of Eastern Finland
 
 - **Associate Professor (Docent) in Open and Distance Education (2022)**  
   Granted by the Presidency of the Turkish Interuniversity Board
 
+- **Assistant Professor (2018-2021)**  
+  Computer Science, Igdir University, Turkey
+
 - **Ph.D. in Computer Education and Instructional Technology (2017)**  
   Middle East Technical University, Turkey
 
-- **Visiting Research Scholar**  
-  University of Florida, USA
-
-- **Assistant Professor of Computer Science**  
-  Igdir University, Turkey
+- **Visiting Research Scholar (2015-2016)**  
+  Educational Technology, University of Florida, USA
 
 - **Research and Teaching Assistant (2011–2018)**  
-  Department of Computer Education and Instructional Technology, Middle East Technical University, Turkey
+  Computer Education and Instructional Technology, Middle East Technical University, Turkey
 
 
 ### 🔬 Research Interests
