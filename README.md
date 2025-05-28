@@ -50,9 +50,8 @@ My research interests include AI in Education, Educational Technology, Human-cen
 
 ---
 
-### 🌐 Academic Profiles & Contact
+### 🌐 Academic Profiles
 
-- 📧 Email: [halilkayaduman@gmail.com](mailto:halilkayaduman@gmail.com)
 - 🔗 [Google Scholar](https://scholar.google.com.tr/citations?user=MbdtvY4AAAAJ&hl=en)
 - 🧬 [ORCID](https://orcid.org/0000-0001-5316-1893)
 - 📊 [Web of Science](https://www.webofscience.com/wos/author/record/AAB-4046-2020)
