@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halil KAYADUMAN Academic CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-btn.primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .nav-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-btn.secondary {
+            background: rgba(255, 255, 255, 0.8);
+            color: #667eea;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-btn.secondary:hover {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: #667eea;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+
+        /* Modern Sidebar */
+        .sidebar {
+            width: 320px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 2rem 0;
+            position: fixed;
+            height: calc(100vh - 70px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0 1rem;
+        }
+
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main Content with Glass Effect */
+        .main-content {
+            flex: 1;
+            margin-left: 320px;
+            padding: 2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            margin-bottom: 2rem;
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .section:hover::before {
+            opacity: 1;
+        }
+
+        .section h2 {
+            color: #2d3748;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section h3 {
+            color: #4a5568;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 1.2rem;
+            color: #2d3748;
+            font-size: 1.05rem;
+        }
+
+        /* Modern Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .info-item {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .info-item:hover::before {
+            opacity: 1;
+        }
+
+        .info-label {
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Modern Skill Tags */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .skill-tag:hover::before {
+            left: 100%;
+        }
+
+        /* Modern Experience Items */
+        .experience-item {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.03), rgba(118, 75, 162, 0.03));
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+        }
+
+        .experience-item:hover::before {
+            opacity: 1;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            color: #2d3748;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-details {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Modern Publication Items */
+        .publication-item {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(5, 150, 105, 0.05));
+            margin: 1.5rem 0;
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .publication-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+        }
+
+        .publication-item:hover::before {
+            opacity: 1;
+        }
+
+        .publication-title {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* Modern Award Items */
+        .award-item {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            margin: 1.5rem 0;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+            transition: all 0.3s ease;
+        }
+
+        .award-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+
+        .award-item:hover::before {
+            top: -25%;
+            right: -25%;
+        }
+
+        .award-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Floating Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: linear-gradient(135deg, #5a67d8, #553c9a);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 85px;
+            left: 1rem;
+            z-index: 1001;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+                width: 280px;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 1.5rem;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .section {
+                padding: 2rem;
+            }
+
+            .nav-actions {
+                gap: 0.5rem;
+            }
+
+            .nav-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-nav {
+                padding: 0 1rem;
+            }
+
+            .nav-brand {
+                font-size: 1.2rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+        }
+
+        /* Smooth animations on load */
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Custom Lists */
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #4a5568;
+        }
+
+        .section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Progress indicator */
+        .progress-bar {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+		.site-footer {
+        clear: both;
+        padding: 20px;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin-left: 250px; /* Match sidebar width */
+    }
+
+    .site-footer .social-icons {
+        margin-bottom: 10px;
+    }
+
+    .site-footer .social-icons a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    .site-footer .social-icons img {
+        width: 24px;
+        height: 24px;
+        filter: grayscale(100%);
+        transition: filter 0.3s;
+    }
+
+    .site-footer .social-icons img:hover {
+        filter: none;
+    }
+	
+	#back-to-top {
+	  position: fixed;
+	  bottom: 30px;
+	  right: 30px;
+	  display: none;       /* Hidden by default */
+	  background-color: #007bff;
+	  color: white;
+	  border: none;
+	  padding: 10px 15px;
+	  border-radius: 50%;
+	  font-size: 20px;
+	  cursor: pointer;
+	  z-index: 1000;
+	  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+	  transition: background-color 0.3s ease;
+	}
+	#back-to-top:hover {
+	  background-color: #0056b3;
+	}
+
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="nav-brand">Halil KAYADUMAN, Ph.D.</div>
+        <div class="nav-actions">
+            
+            <a href="#footer" class="nav-btn primary">Contact</a>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu" onclick="toggleSidebar()">☰ Menu</button>
+    
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <h2>Navigation</h2>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#personal-details" class="nav-link">Personal Details</a></li>
+                <li class="nav-item"><a href="#degrees" class="nav-link">Degrees</a></li>
+                <li class="nav-item"><a href="#language-skills" class="nav-link">Language Skills</a></li>
+                <li class="nav-item"><a href="#technical-skills" class="nav-link">Technical Skills</a></li>
+                <li class="nav-item"><a href="#current-employment" class="nav-link">Current Employment</a></li>
+                <li class="nav-item"><a href="#work-experience" class="nav-link">Previous Work Experience</a></li>
+                <li class="nav-item"><a href="#research-funding" class="nav-link">Research Funding & Grants</a></li>
+                <li class="nav-item"><a href="#research-output" class="nav-link">Research Output</a></li>
+                <li class="nav-item"><a href="#teaching-merits" class="nav-link">Teaching Merits</a></li>
+                <li class="nav-item"><a href="#awards-honours" class="nav-link">Awards & Honours</a></li>
+                <li class="nav-item"><a href="#academic-merits" class="nav-link">Other Academic Merits</a></li>
+                
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="personal-details" class="section">
+				<h2>Personal Details</h2>
+
+				<!-- Add image here -->
+				<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+					<img src="1QD98pKW_400x400.jpg" alt="Photo of Halil Kayaduman" style="width: 250px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<p>
+						I am an Associate Professor at the Distance Education Application and Research Center at Inonu University, Turkey. I recently worked as a Visiting Postdoctoral Researcher at the School of Computing, University of Eastern Finland. During this time, I applied advanced analytical and modeling methods, including <b>sequence analysis, clustering, process mining, psychological networks, transition network analysis, VaSSTra, and multilevel vector autoregression.</b>
+					</p>
+				</div>
+
+				<div class="info-grid">
+					<div class="info-item">
+						<div class="info-label">Full Name</div>
+						<div>Halil KAYADUMAN</div>
+					</div>            
+					<div class="info-item">
+						<div class="info-label">ORCID</div>
+						<div>0000-0001-5316-1893</div>
+					</div>
+					<div class="info-item">
+						<div class="info-label">Web of Science ID</div>
+						<div>AAB-4046-2020</div>
+					</div>
+				</div>
+
+				<p>
+					I earned my Ph.D. in Computer Education and Instructional Technology from Middle East Technical University, Turkey, and spent a year as a visiting research scholar at the University of Florida, USA. After completing my Ph.D., I served as an Assistant Professor of Computer Science at Igdir University, Turkey, where I taught courses in instructional design, basic statistics, human-computer interaction, and computer programming. I also held administrative roles as Director of the Digital Education Coordinatorship and Deputy Director of the Distance Education Application and Research Center at Igdir University.
+				</p>
+				<p>
+					My research interests include AI in Education, Educational Technology, Human-centered AI, Learning Analytics, Human–Computer Interaction (HCI), and Open and Distance Education.
+				</p>
+		</section>
+
+
+            <section id="degrees" class="section">
+                <h2>Degrees</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Associate Professor (Docent)</div>
+                    <div class="experience-details">The Presidency of the Turkish Interuniversity Board, Turkiye | 2022</div>
+                    <p>Subject Field: Open and Distance Education</p>
+                    
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Ph.D. in Computer Education and Instructional Technology</div>
+                    <div class="experience-details">Middle East Technical University, Turkiye | 2017</div>
+                    <p>Dissertation: Investigating Stages of Concern and Technology Integration Self-Efficacy Beliefs of English Language Pre-Service Teachers.</p>
+                </div>
+                
+            </section>
+
+            <section id="language-skills" class="section">
+                <h2>Language Skills</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Native Language</div>
+                        <div>Turkish</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">English</div>
+                        <div>Full professional proficiency (Speaking, Writing, Reading)</div>
+                    </div>
+                    
+                </div>
+                
+            </section>
+
+            <section id="technical-skills" class="section">
+                <h2>Technical Skills</h2>
+                
+                <h3>Programming Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">R</span>            
+                </div>
+
+                <h3>Statistical & Data Analysis Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">SPSS</span>
+                    <span class="skill-tag">JASP</span>
+                    <span class="skill-tag">Jamovi</span>                    
+                </div>
+				
+				<h3>Qualitative Analysis Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">NVivo</span>
+                    <span class="skill-tag">MAXQDA</span>                                 
+                </div>
+
+                <h3>Advanced Analytical & Modeling Methods</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Sequence Analysis</span>
+                    <span class="skill-tag">Clustering</span>
+                    <span class="skill-tag">Process Mining</span>
+                    <span class="skill-tag">Social Network Analysis</span>
+                    <span class="skill-tag">Psychological Networks</span>
+					<span class="skill-tag">Transition Network Analysis</span>
+					<span class="skill-tag">VaSSTra</span>
+					<span class="skill-tag">Multilevel Vector Autoregression</span>
+                </div>
+				
+				<h3>E-Learning and Authoring Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Adobe Captivate</span>
+                    <span class="skill-tag">Articulate Storyline</span>                                 
+                </div>
+				
+				<h3> Open Source Softwares </h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Moodle</span>
+                    <span class="skill-tag">WordPress</span>                                 
+                </div>
+
+                
+            </section>
+
+            <section id="current-employment" class="section">
+                <h2>Current Employment</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Senior Lecturer</div>
+                    <div class="experience-details"> Inonu University, Turkiye | 2021 - Present</div>
+                    <p><strong>Department:</strong> Distance Education Application and Research Center</p>
+					<p>Conducting thorough needs analyses to identify the learning requirements of students and faculty members, I develop and deliver training sessions tailored to their needs. I design comprehensive, end-to-end learning solutions while collaborating with subject matter experts to ensure content accuracy and relevance. Additionally, I provide support for the integration of technological and pedagogical tools, including learning management systems, to enhance the overall learning experience.</p>
+                    
+                </div>
+            </section>
+
+            <section id="work-experience" class="section">
+                <h2>Previous Work Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Visiting Postdoctoral Researcher</div>
+                    <div class="experience-details">University of Eastern Finland, Finland | 2024-2025</div>
+                    <p>Conducting advanced research into the dynamic nature of self-regulation and motivation, focusing on personalised, idiographic approaches to uncover individual variations and mechanisms. Responsibilities include designing and implementing studies, analysing complex data, publishing findings in peer-reviewed journals, and contributing to the academic community through presentations and collaborations.</p>
+                </div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Assistant Professor Dr.</div>
+                    <div class="experience-details">Igdir University, Turkiye | 2018-2021</div>
+                    <p>Undergraduate and graduate courses—such as Programming with Python, Instructional Design, Basic Statistics, and Human-Computer Interaction—have been taught, with responsibilities including syllabus development, material design, and student assessment. Graduate research has been supervised, and academic research has been conducted, published, and presented at conferences. Service has been provided through committee work and journal peer review. Distance education programs have been developed and managed, including oversight of resources, staff training, and program evaluation. Strategic initiatives for technology integration in education have been implemented, including university-wide delivery of “Digital Literacy” for students and “Teaching and Learning in the Digital Age” for faculty.</p>
+                </div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Visiting Doctoral Researcher</div>
+                    <div class="experience-details">University of Florida, USA | 2015-2016</div>
+                    <p>Analyzing data, reviewing the literature, and collaborating with other researchers in the department. Presenting the research findings from Ph.D. dissertation.</p>
+                </div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Research and Teaching Assistant</div>
+                    <div class="experience-details">Middle East Technical University, Turkiye | 2011-2018</div>
+                    <p>Research in computer education, technolog adoption, instructional technology, and distance learning has been conducted and shared through publications and conferences. Support has been provided in teaching undergraduate and graduate courses by developing materials, grading, and assisting instruction.</p>
+                </div>
+
+                
+            </section>
+
+            <section id="research-funding" class="section">
+			
+                <h2>Research Funding and Grants</h2>
+                
+                
+                <div class="experience-item">
+                    <div class="experience-title">Visiting Postdoctoral Researcher</div>
+                    <div class="experience-details">The Scientific and Technological Research Council of Turkey (TÜBİTAK) | Period: 2024 - 2025</div>
+                    <p>Learning Analytics Unit of Computer Science, School of Computing, University of Eastern Finland.</p>
+				</div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Senior Researcher</div>
+                    <div class="experience-details">Inonu University Scientific Research Projects Coordination Unit | Period: 2024 - 2026</div>
+                    <p>Integration of Digital Content in Education: Multimedia Design for Academics</p>
+				</div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Senior Researcher</div>
+                    <div class="experience-details">Inonu University Scientific Research Projects Coordination Unit | Period: 2022 - 2023</div>
+                    <p>Integration of Moodle, an Open Source Learning Management System, into Inonu University Formal and Distance Education</p>
+				</div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Senior Researcher</div>
+                    <div class="experience-details">The Scientific and Technological Research Council of Turkey (TÜBİTAK) | Period: 2022 - 2023</div>
+                    <p>Examination of Instructor’s Image in the Descriptive and Prescriptive Content of Educational Videos</p>
+				</div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Senior Researcher</div>
+                    <div class="experience-details">The Scientific and Technological Research Council of Turkey (TÜBİTAK) | Period: 2020</div>
+                    <p>Determination of Digital Content Ecosystem Requirements in Higher Education</p>
+				</div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Visiting Doctoral Researcher</div>
+                    <div class="experience-details">The Scientific and Technological Research Council of Turkey (TÜBİTAK) | Period: 2015 - 2016</div>
+                    <p>Educational Technology department of College of Education, University of Florida..</p>
+				</div>
+				
+			</section>
+			
+			<section id="research-output" class="section">
+                <h2>Research Output</h2>
+                <div class="experience-item">
+                    <!-- Include Font Awesome CDN once before using icons -->
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+					<p> My Google Scholar and ResearchGate profiles are up to date. You can see my publications there. </p>
+					<a href="https://scholar.google.com.tr/citations?user=MbdtvY4AAAAJ&hl=en" target="_blank" title="Google Scholar Halil Kayaduman" style="text-decoration: none; color: #333; font-size: 24px; margin-right: 15px; transition: color 0.3s;">
+						<i class="fas fa-graduation-cap" style="vertical-align: middle;"></i> Google Scholar 
+					</a>
+					
+					<a href="https://www.researchgate.net/profile/Halil-Kayaduman?ev=hdr_xprf" target="_blank" title="ResearchGate Halil KAYADUMAN" style="text-decoration: none; color: #333; font-size: 24px; transition: color 0.3s;">
+						<i class="fab fa-researchgate" style="vertical-align: middle;"></i> ResearchGate
+					</a>
+
+                </div>
+        </section>
+
+			<section id="teaching-merits" class="section">
+                <h2>Teaching Merits</h2>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Courses</div>
+                    <div class="experience-details"> Igdir University, Turkiye | 2018 - 2021</div>
+                    <p><strong>Department:</strong> Computer Science </p>
+					<ul>
+						<li>Undergraduate: <b>Introduction to Programming with Python.</b></li>
+						<li>Undergraduate: <b>Instructional Material Design and Development.</b></li>
+						<li>Undergraduate: <b>Basic Statistics.</b></li>
+						<li>Graduate: <b>Human-Computer Interaction.</b></li>  
+					</ul>                    
+                </div>
+				
+				<div class="experience-item" style="margin-bottom: 30px;">
+					<div class="experience-title" style="font-size: 1.5em; font-weight: bold; margin-bottom: 10px;">Teaching Projects</div>
+
+						  <!-- Project 1 -->
+						  <div style="margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+							<div class="experience-details" >Instructor</div>
+							<p><strong>The Scientific and Technological Research Council of Turkey (TÜBİTAK)</strong></p>
+							<p>Designing and Implementation of Technology Supported Course Activities in the English Language Teaching</p>
+						  </div>
+
+						  <!-- Project 2 -->
+						  <div style="margin-bottom: 20px;">
+							<div class="experience-details">Instructor</div>
+							<p><strong>Erasmus+ Staff Mobility for Teaching at Siedlce University of Natural Sciences and Humanities, Poland</strong></p>
+							<p>Instructional Material Design and Development</p>
+						  </div>
+				</div>
+				
+				<div class="experience-item">
+                    <div class="experience-title">Trainings and Guest Lecturers</div>                    
+					<ul>
+						<li>2024 – Learning Analytics Dashboards, Summer School of Learning Analytics, University of Eastern Finland.</li>
+						<li>2024 – Learning Analytics Dashboards, Learning Analytics Undergraduate course, University of Eastern Finland.</li>
+						<li>2020 - Technological and Pedagogical Use of the Learning Management System in the Igdir University of Turkey.</li>
+						<li>2019 - Design and Use of Technology in Education for In-service Teachers, Agrı-Dogubayazit, Ministry of National Education of Turkey.</li>
+						<li>2019 - Professional Development Program for Distance Education Instructors in the Igdir University of Turkey.</li>
+						<li>2018 - Coding with Scratch, AppInventor, and Python for In-service Teachers, Igdir, Ministry of National Education of Turkey.</li>
+						
+					</ul>                    
+                </div>
+				
+				
+				<div class="experience-item">
+                    <div class="experience-title">Teaching Assistantship</div>
+                    <div class="experience-details"> Middle East Technical University, Turkiye | 2011 - 2018</div>
+                    <p><strong>Department:</strong> Computer Education and Instructional Technology </p>
+					<ul>
+						<li>Undergraduate: <b>Computer Applications in Education.</b></li>
+						<li>Undergraduate: <b>Design and Use of Instructional Material.</b></li>
+						<li>Undergraduate: <b>Computer Hardware.</b></li>
+						<li>Undergraduate: <b>Computer Networks and Communications.</b></li>
+						<li>Undergraduate: <b>Teaching Methods in Computer Education.</b></li>
+						<li>Undergraduate: <b>Project Development and Management.</b></li>
+						<li>Graduate: <b>Educational Statistics.</b></li>  
+					</ul>                    
+                </div>               
+        </section>
+		
+			<section id="awards-honours" class="section">
+			<h2>Awards and Honours</h2>
+    
+			<div class="award-item">
+				<div class="award-title">Congratulation Certificate</div>
+				<div class="experience-details">Igdir University, Turkiye | 2020</div>
+				<p>For the effort to continue education during the COVID-19 pandemic</p>
+			</div>
+			
+			<div class="award-item">
+				<div class="award-title">Congratulation Certificate</div>
+				<div class="experience-details">Ataturk University, Turkiye | 2020</div>
+				<p>For the TUBITAK project “Determination of Digital Content Ecosystem Requirements in Higher Education</p>
+			</div>
+			
+			<div class="award-item">
+				<div class="award-title">Congratulation Certificate</div>
+				<div class="experience-details">Igdir University, Turkiye | 2020</div>
+				<p>For the TUBITAK project “Determination of Digital Content Ecosystem Requirements in Higher Education</p>
+			</div>
+			
+			<div class="award-item">
+				<div class="award-title">Honor Degree</div>
+				<div class="experience-details">Inonu University, Turkiye | 2008</div>
+				<p>Graduated with the second highest GPA in the department</p>
+			</div>
+			
+		</section>
+		
+		
+			<section id="academic-merits" class="section">
+			
+                <h2>Other key academic merits</h2>
+                
+				<ul>
+					<li>Conference Scientific Committee Membership: ICOLDE 2021 International Congress on Open Learning and Distance Education, Atatürk University Open Education Faculty, Erzurum, TURKEY.</li>
+					<li>Jury Member for Doctoral Dissertation: Examination on Campus-Based Online Courses Processes Grounded in Distance Education Centers' Experiences, 2020, Atatürk University, Erzurum, TURKEY.</li>
+					<li>Jury Member for Master's Thesis: "Problems in User Guides for Information Systems and User Experiences: The Case of Electronic Document Management System," 2019, Atatürk University, Erzurum, TURKEY.</li>
+					<li>Reviewer: TUBITAK 1002 - A Short-term Research Project Support Module, 2024.</li>
+					<li>Reviewer: TUBITAK 1002 - A Short-term Research Project Support Module, 2023.</li>
+					<li>Reviewer in <em>Computers in Human Behavior</em>.</li>
+					<li>Reviewer in <em>The International Review of Research in Open and Distributed Learning</em>.</li>
+					<li>Reviewer in <em>International Journal of Human-Computer Interaction</em>.</li>
+					<li>Reviewer in <em>IEEE Transactions on Learning Technologies</em>.</li>
+					<li>Reviewer in <em>Innovations in Education and Teaching International</em>.</li>
+					<li>Reviewer in <em>Journal of Open Praxis</em>.</li>
+					<li>Reviewer in <em>Journal of Learning and Individual Differences</em>.</li>
+					<li>Reviewer in <em>British Journal of Educational Technology</em>.</li>
+				</ul>
+
+            </section>
+			
+			
+		</main>
+	</div>
+	
+	<script>
+    // Mobile menu toggle
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active');
+    }
+
+    // Progress bar scroll
+    window.onscroll = function () {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+	</script>
+	
+	
+	<footer class="site-footer" id="footer">
+		<div class="social-icons">
+			<a href="https://www.instagram.com/halilkayaduman/" target="_blank" aria-label="Instagram">
+				<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+			</a>
+			<a href="https://x.com/halilkayaduman" target="_blank" aria-label="X">
+				<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X">
+			</a>
+			<a href="https://www.linkedin.com/in/halilkayaduman/" target="_blank" aria-label="LinkedIn">
+				<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">
+			</a>
+			<a href="https://github.com/hkayaduman" target="_blank" aria-label="GitHub">
+				<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+			</a>
+		</div>
+		<p>&copy; <span id="current-year"></span> Halil Kayaduman</p>
+	</footer>
+	
+	<script>
+    // Automatically update the copyright year
+		document.getElementById('current-year').textContent = new Date().getFullYear();
+	</script>
+
+	<button id="back-to-top" title="Go to top">↑</button>
+	<script>
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 200) {
+      backToTopBtn.style.display = 'block';
+    } else {
+      backToTopBtn.style.display = 'none';
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+</script>
+
+	
+</body>
+</html>
+			
+			
+			
