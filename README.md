@@ -4,6 +4,8 @@ I am an Associate Professor at the Distance Education Application and Research C
 
 I earned my Ph.D. in Computer Education and Instructional Technology from Middle East Technical University, Turkey, and spent a year as a visiting research scholar at the University of Florida, USA. After completing my Ph.D., I served as an Assistant Professor of Computer Science at Igdir University, Turkey, where I taught courses in instructional design, basic statistics, human-computer interaction, and computer programming. I also held administrative roles as Director of the Digital Education Coordinatorship and Deputy Director of the Distance Education Application and Research Center at Igdir University.
 
+In addition to my academic work, I design and build AI agents and workflow automations using n8n, integrating intelligent systems into real-world applications.
+
 My research interests include AI in Education, Educational Technology, Human-centered AI, Learning Analytics, Human–Computer Interaction (HCI), and Open and Distance Education.
 
 ---
