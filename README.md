@@ -44,11 +44,13 @@ My research interests include AI in Education, Educational Technology, Human-cen
 
 ### 🛠️ Technical Skills
 
-- **Programming Languages**: Python, R.
-- **Statistical & Data Analysis Tools**: SPSS, JASP, Jamovi, MAXQDA, NVivo.
-- **Advanced Analytical & Modeling Methods**: Sequence Analysis, Clustering, Process Mining, Social Network Analysis, Psychological Networks, Transition Network Analysis, VaSSTra, Multilevel Vector Autoregression.
-- **E-learning & Authoring Tools**: Adobe Captivate, Articulate Storyline  
-- **Open-source Deployment on Linux**: Moodle, WordPress
+- **Programming Languages**: Python, R  
+- **Statistical & Data Analysis Tools**: SPSS, JASP, Jamovi, NVivo, MAXQDA  
+- **Advanced Analytical & Modeling Methods**: Sequence Analysis, Clustering, Process Mining, Social Network Analysis, Psychological Networks, Transition Network Analysis, VaSSTra, Multilevel Vector Autoregression  
+- **AI, Automation & Cloud Tools**: n8n (workflow automation, AI agents), Ollama (local LLM deployment), OpenAI API, Google Gemini API, Google APIs (Gmail, Drive, Calendar), EasyPanel (server management), Docker, Git/GitHub  
+- **E-Learning & Authoring Tools**: Adobe Captivate, Articulate Storyline, H5P, SCORM/xAPI  
+- **Open-Source Deployment**: Moodle, WordPress  
+
 
 ---
 
